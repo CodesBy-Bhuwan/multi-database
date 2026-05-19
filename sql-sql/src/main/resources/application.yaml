@@ -17,3 +17,6 @@ spring:
     show-sql: true
 
   # Postgresql is to store only product details and mysql for user details
+
+  flyway:
+    enabled: false
