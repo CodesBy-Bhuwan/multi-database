@@ -1,6 +1,5 @@
 package com.multidb.sql_sql.config;
 
-package com.example.multidb.config;
 
 import javax.sql.DataSource;
 

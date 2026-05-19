@@ -1,7 +1,6 @@
 package com.multidb.sql_sql.mysql;
 
-import com.example.multidb.mysql.entity.User;
-import com.example.multidb.mysql.repository.UserRepository;
+import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,9 +9,9 @@ import java.util.List;
     @RequestMapping("/users")
     public class UserController {
 
-        private final UserRepository repository;
+        private final UserRepo repository;
 
-        public UserController(UserRepository repository) {
+        public UserController(UserRepo repository) {
             this.repository = repository;
         }
 
