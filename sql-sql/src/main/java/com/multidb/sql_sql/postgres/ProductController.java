@@ -1,7 +1,5 @@
 package com.multidb.sql_sql.postgres;
 
-import com.example.multidb.postgres.entity.Product;
-import com.example.multidb.postgres.repository.ProductRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,20 +8,20 @@ import java.util.List;
     @RequestMapping("/products")
     public class ProductController {
 
-        private final ProductRepository repository;
+        private final ProductRepo repository;
 
-        public ProductController(ProductRepository repository) {
+        public ProductController(ProductRepo repository) {
             this.repository = repository;
         }
 
         @PostMapping
-        public Product create(@RequestBody Product product) {
+        public ProductEntity create(@RequestBody ProductEntity product) {
             return repository.save(product);
         }
 
         @GetMapping
-        public List<Product> all() {
+        public List<ProductEntity> all() {
             return repository.findAll();
         }
     }
-}
+
