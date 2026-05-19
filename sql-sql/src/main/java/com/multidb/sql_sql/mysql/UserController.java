@@ -16,12 +16,12 @@ import java.util.List;
         }
 
         @PostMapping
-        public User create(@RequestBody User user) {
+        public UserEntity create(@RequestBody UserEntity user) {
             return repository.save(user);
         }
 
         @GetMapping
-        public List<User> all() {
+        public List<UserEntity> all() {
             return repository.findAll();
         }
     }
